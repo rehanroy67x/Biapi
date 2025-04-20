@@ -1,1 +1,19 @@
-
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/bio_change.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "public/index.html"
+    },
+    {
+      "src": "/api/bio_change",
+      "dest": "/api/bio_change.py"
+    }
+  ]
+}
